@@ -19,7 +19,7 @@
 # For more info:
 # https://arduino.github.io/arduino-cli/0.33/platform-specification/
 
-name=Adafruit SAMD (32-bits ARM Cortex-M0+ and Cortex-M4) Boards
+name=Adlink I-Pi-OT2IT
 version=1.7.16
 
 # Compile variables
