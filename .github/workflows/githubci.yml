@@ -36,14 +36,14 @@ jobs:
         
     - name: Install BSP and Libraries
       env:
-        BSP_URL: https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
-        BSP_PATH: .arduino15/packages/adafruit/hardware/samd
+        BSP_URL: https://raw.githubusercontent.com/ADLINK/OT2IT/main/packages_adlink_ot2it.json
+        BSP_PATH: .arduino15/packages/adlink/hardware/samd
       run: |
         arduino-cli config init
         arduino-cli core update-index
         arduino-cli core update-index --additional-urls $BSP_URL        
         arduino-cli core install arduino:samd --additional-urls $BSP_URL
-        arduino-cli core install adafruit:samd --additional-urls $BSP_URL
+        arduino-cli core install adlink:samd --additional-urls $BSP_URL
         # Replace release BSP with our code
         BSP_VERSION=`eval ls $HOME/$BSP_PATH`
         rm -r $HOME/$BSP_PATH/*
