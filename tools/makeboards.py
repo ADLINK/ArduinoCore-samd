@@ -221,4 +221,4 @@ make_board("SAME54",
            "0x0B63", 
            ["0xD101", "0xD102", "0xD103"], 
            "IPI_OT2IT", "-D__SAME54P20A__ -DADLINK_IPI_OT2IT", 
-           "ipi_ot2it/bootloader-ipi-ot2it.bin");
+           "ipi_ot2it/bootloader-ot2it.bin");

@@ -58,7 +58,7 @@ adlink_ipi_ot2it.build.variant_system_lib=
 adlink_ipi_ot2it.build.vid=0x0B63
 adlink_ipi_ot2it.build.pid=0xD101
 adlink_ipi_ot2it.bootloader.tool=openocd
-adlink_ipi_ot2it.bootloader.file=ipi_ot2it/bootloader-ipi-ot2it.bin
+adlink_ipi_ot2it.bootloader.file=ipi_ot2it/bootloader-ot2it.bin
 adlink_ipi_ot2it.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
 # Menu: Cache
