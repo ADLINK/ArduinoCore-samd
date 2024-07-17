@@ -16,8 +16,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_IPI_OT2IT_
-#define _VARIANT_IPI_OT2IT_
+#ifndef _VARIANT_GRAND_CENTRAL_M4_
+#define _VARIANT_GRAND_CENTRAL_M4_
 
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
@@ -154,6 +154,9 @@ static const uint8_t ATN = PIN_ATN;
 // Serial2
 #define PIN_SERIAL2_RX      (19)
 #define PIN_SERIAL2_TX      (18)
+//new
+//#define PIN_SERIAL2_RX      (22)
+//#define PIN_SERIAL2_TX      (21)
 #define PAD_SERIAL2_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL2_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL2		  sercom4
@@ -161,10 +164,24 @@ static const uint8_t ATN = PIN_ATN;
 // Serial3
 #define PIN_SERIAL3_RX      (17)
 #define PIN_SERIAL3_TX      (16)
+//#define PIN_SERIAL3_RX      (16)
+//#define PIN_SERIAL3_TX      (17)
 #define PAD_SERIAL3_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL3_RX      (SERCOM_RX_PAD_1)
-#define SERCOM_SERIAL3		  sercom1
+#define SERCOM_SERIAL3		 sercom3
 
+
+#if 0
+#define PIN_SERIAL3_RX      (17)
+#define PIN_SERIAL3_TX      (16)
+//#define PIN_SERIAL3_RX      (16)
+//#define PIN_SERIAL3_TX      (17)
+//#define PAD_SERIAL3_TX      (UART_TX_PAD_0)
+//#define PAD_SERIAL3_RX      (SERCOM_RX_PAD_1)
+#define PAD_SERIAL3_TX      (UART_TX_PAD_1)
+#define PAD_SERIAL3_RX      (SERCOM_RX_PAD_0)
+#define SERCOM_SERIAL3		  sercom1
+#endif
 // Serial4
 #define PIN_SERIAL4_RX      (15)
 #define PIN_SERIAL4_TX      (14)
@@ -211,8 +228,19 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 2
+//#define WIRE_INTERFACES_COUNT 2
+#define WIRE_INTERFACES_COUNT 1
 
+#if 1
+#define PIN_WIRE_SDA        (24)
+#define PIN_WIRE_SCL        (25)
+#define PERIPH_WIRE         sercom7
+#define WIRE_IT_HANDLER     SERCOM7_Handler
+#define WIRE_IT_HANDLER_0   SERCOM7_0_Handler
+#define WIRE_IT_HANDLER_1   SERCOM7_1_Handler
+#define WIRE_IT_HANDLER_2   SERCOM7_2_Handler
+#define WIRE_IT_HANDLER_3   SERCOM7_3_Handler
+#else
 #define PIN_WIRE_SDA        (62)
 #define PIN_WIRE_SCL        (63)
 #define PERIPH_WIRE         sercom3
@@ -221,7 +249,7 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 #define WIRE_IT_HANDLER_1   SERCOM3_1_Handler
 #define WIRE_IT_HANDLER_2   SERCOM3_2_Handler
 #define WIRE_IT_HANDLER_3   SERCOM3_3_Handler
-
+#endif
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
@@ -244,6 +272,11 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 #define PIN_USB_DM          (78)
 #define PIN_USB_DP          (79)
 
+//new
+//#define PIN_USB_HOST_ENABLE (25)
+//#define PIN_USB_DM          (26)
+//#define PIN_USB_DP          (27)
+
 /*
  * I2S Interfaces
  */
@@ -263,18 +296,18 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 #define EXTERNAL_FLASH_USE_QSPI
 
 //QSPI Pins
-#define PIN_QSPI_SCK	      (89)
-#define PIN_QSPI_CS		      (90)
-#define PIN_QSPI_IO0	      (91)
-#define PIN_QSPI_IO1	      (92)
-#define PIN_QSPI_IO2	      (93)
-#define PIN_QSPI_IO3	      (94)
+#define PIN_QSPI_SCK	      (90)
+#define PIN_QSPI_CS		      (91)
+#define PIN_QSPI_IO0	      (92)
+#define PIN_QSPI_IO1	      (93)
+#define PIN_QSPI_IO2	      (94)
+#define PIN_QSPI_IO3	      (95)
 
 //PCC Pins
 #define PIN_PCC_DEN1        (26)
 #define PIN_PCC_DEN2        (27)
 #define PIN_PCC_CLK         (28)
-#define PIN_PCC_XCLK	      (29)
+#define PIN_PCC_XCLK	    (29)
 #define PIN_PCC_D0          (37)
 #define PIN_PCC_D1          (36)
 #define PIN_PCC_D2          (35)
@@ -319,6 +352,8 @@ extern SERCOM sercom6;
 extern SERCOM sercom7;
 
 extern Uart Serial1;
+extern Uart Serial2;
+extern Uart Serial3;
 
 #endif
 
@@ -343,4 +378,4 @@ extern Uart Serial1;
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
-#endif /* _VARIANT_IPI_OT2IT_ */
+#endif /* _VARIANT_GRAND_CENTRAL_M4_ */
