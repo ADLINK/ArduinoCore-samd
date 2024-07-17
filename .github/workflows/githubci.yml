@@ -36,7 +36,7 @@ jobs:
         
     - name: Install BSP and Libraries
       env:
-        BSP_URL: https://raw.githubusercontent.com/ADLINK/OT2IT/main/packages_adlink_ot2it.json
+        BSP_URL: https://raw.githubusercontent.com/ADLINK/OT2IT/main/package_adlink_ot2it.json
         BSP_PATH: .arduino15/packages/adlink/hardware/samd
       run: |
         arduino-cli config init
