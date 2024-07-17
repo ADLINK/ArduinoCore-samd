@@ -216,7 +216,7 @@ build_global_menu()
 make_board("SAME54", 
            "adlink_ipi_ot2it", 
            "ipi_ot2it", 
-           "Adlink", 
+           "ADLink Technology Inc.", 
            "I-Pi-OT2IT", 
            "0x0B63", 
            ["0xD101", "0xD102", "0xD103"], 

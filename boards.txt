@@ -22,9 +22,9 @@ menu.usbstack=USB Stack
 menu.debug=Debug
 
 # -----------------------------------
-# Adlink I-Pi-OT2IT (SAME54)
+# ADLink Technology Inc. I-Pi-OT2IT (SAME54)
 # -----------------------------------
-adlink_ipi_ot2it.name=Adlink I-Pi-OT2IT (SAME54)
+adlink_ipi_ot2it.name=ADLink Technology Inc. I-Pi-OT2IT (SAME54)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 adlink_ipi_ot2it.vid.0=0x0B63
@@ -47,7 +47,7 @@ adlink_ipi_ot2it.upload.native_usb=true
 adlink_ipi_ot2it.build.mcu=cortex-m4
 adlink_ipi_ot2it.build.f_cpu=120000000L
 adlink_ipi_ot2it.build.usb_product="I-Pi-OT2IT"
-adlink_ipi_ot2it.build.usb_manufacturer="Adlink"
+adlink_ipi_ot2it.build.usb_manufacturer="ADLink Technology Inc."
 adlink_ipi_ot2it.build.board=IPI_OT2IT
 adlink_ipi_ot2it.build.core=arduino
 adlink_ipi_ot2it.build.extra_flags=-D__SAME54P20A__ -DADLINK_IPI_OT2IT -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
