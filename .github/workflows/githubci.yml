@@ -9,7 +9,7 @@ jobs:
       matrix:
         board:
           # Alphabetical order
-          - 'ipi_ot2it:speed=120,usbstack=tinyusb'
+          - 'ipi_ot2it:speed=120'
 
     runs-on: ubuntu-latest
     
